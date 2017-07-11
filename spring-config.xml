@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+    <!--配置service-->
+    <bean id="helloworld" class="com.springdemo.HelloWorld">
+        <property name="message" value="Say hello to liu zhaoyang"/>
+    </bean>
+
+    <!--springdemo2的配置-->
+    <bean id="UserServiceId" class="com.springdemo2.UserServiceImpl">
+
+    </bean>
+</beans>
