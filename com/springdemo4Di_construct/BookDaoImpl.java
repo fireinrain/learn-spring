@@ -1,4 +1,4 @@
-package com.springIoC3;
+package com.springdemo4Di_construct;
 
 /**
  * Created by Administrator on 2017/7/11.
@@ -6,6 +6,6 @@ package com.springIoC3;
 public class BookDaoImpl implements BookDao {
     @Override
     public void save() {
-        System.out.println("添加书籍-->来自注入的Bean");
+        System.out.println("添加书籍");
     }
 }

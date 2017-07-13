@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+    <bean id="bookDaoId" class="com.springdemo4Di_construct.BookDaoImpl"></bean>
+    <!--这是默认的装配bean 即默认构造-->
+    <!--<bean id="bookServiceId" class="com.springdemo4Di_construct.BookServiceImpl">-->
+        <!--<property name="bookDao" ref ="bookDaoId"></property>-->
+    <!--</bean>-->
+
+    <!--创建工厂实例-->
+    <bean id="myBeanId" class="com.springdemo5_InstanceFactory.MyBeanFactory"></bean>
+
+    <!--从工厂实例获取service-->
+    <bean id="bookServiceId" class="com.springdemo4Di_construct.MyBeanFactory" factory-bean="myBeanId" factory-method="createService"></bean>
+</beans>

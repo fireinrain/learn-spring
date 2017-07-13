@@ -1,4 +1,4 @@
-package com.springIoC3;
+package com.springdemo5_InstanceFactory;
 
 /**
  * Created by Administrator on 2017/7/11.
