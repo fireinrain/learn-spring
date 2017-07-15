@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--创建Person-->
+
+    <bean id="personId" class="com.springdemo7_xml_setter.Person">
+        <property name="pname" value="liuzhaoyang"></property>
+        <property name="age" value="23"></property>
+        <property name="homeAddress" ref="AddressId"></property>
+        <property name="cpAddress" ref="cpAddressId"></property>
+    </bean>
+
+    <bean id="AddressId" class="com.springdemo7_xml_setter.Address">
+        <property name="addr" value="江西"></property>
+        <property name="tel" value="1324525345"></property>
+    </bean>
+
+    <bean id="cpAddressId" class="com.springdemo7_xml_setter.Address">
+        <property name="addr" value="北京"></property>
+        <property name="tel" value="110"></property>
+    </bean>
+</beans>

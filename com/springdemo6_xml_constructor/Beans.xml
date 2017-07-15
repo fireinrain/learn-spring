@@ -5,7 +5,20 @@
 
 
 
+    <!--构造方法注入
+    ****<constructor-arg>由于配置构造方法的一个参数argument
+        name:参数的名称
+        value:设置的普通数据
+        ref：引用数据（另一个bean的id值）
 
+    -->
 
-    <bean id="bookServiceId"></bean>
+    <bean id="UserId" class="com.springdemo6_xml_constructor.User">
+        <!--<constructor-arg name="name" value="刘朝阳"></constructor-arg>-->
+        <!--<constructor-arg name="age" value="23"></constructor-arg>-->
+
+        <constructor-arg index="0" type="java.lang.String" value="1"></constructor-arg>
+        <constructor-arg index="1" type="java.lang.Integer" value="2"></constructor-arg>
+
+    </bean>
 </beans>

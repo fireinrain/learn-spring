@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!--使用p 命名空间简化property的书写
+    1.要使用p命名空间，必须点导入约束
+     xmlns:p="http://www.springframework.org/schema/p"
+
+    2.在bean添加属性：p:属性=“普通值”，p：属性-ref=“引用值的id”
+
+
+
+    -->
+<!--创建Person-->
+
+    <bean id="personId" class="com.springdemo8_xml_p_namespace.Person"
+        p:age="23"
+          p:pname="xiaoqian"
+          p:cpAddress-ref="cpAddressId"
+          p:homeAddress-ref="AddressId"
+
+    >
+
+    </bean>
+
+    <bean id="AddressId" class="com.springdemo8_xml_p_namespace.Address"
+
+        p:addr="东莞"
+          p:tel="123343556576889"
+    >
+    </bean>
+
+    <bean id="cpAddressId" class="com.springdemo8_xml_p_namespace.Address"
+          p:addr="上海"
+          p:tel="911"
+
+    >
+    </bean>
+</beans>
