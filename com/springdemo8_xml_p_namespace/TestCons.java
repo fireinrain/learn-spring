@@ -16,17 +16,17 @@ public class TestCons {
         Person person = (Person) applicationContext.getBean("personId");
         System.out.println(person);
     }
-    @Test
-    public void test2(String name,Integer age,int...args){
-
-        int arr[] = new int[5];
-        for(int num : arr){
-            num = 1;
-        }
-        System.out.println(arr[0]);
-
-        TestCons testCons = new TestCons();
-        testCons.test2("name",12,13,24,56,8);
-
-    }
+//    @Test
+//    public void test2(String name,Integer age,int...args){
+//
+//        int arr[] = new int[5];
+//        for(int num : arr){
+//            num = 1;
+//        }
+//        System.out.println(arr[0]);
+//
+//        TestCons testCons = new TestCons();
+//        testCons.test2("name",12,13,24,56,8);
+//
+//    }
 }
