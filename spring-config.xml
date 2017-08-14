@@ -7,8 +7,18 @@
 
 
     <!--配置service-->
-    <bean id="helloworld" class="com.springdemo.HelloWorld">
+    <bean id="helloworld" class="com.springdemo.HelloWorld" lazy-init="true" init-method="init"
+          destroy-method="destroy"
+    >
         <property name="message" value="Say hello to liu zhaoyang"/>
+    </bean>
+
+    <!--springdemo 中的people bean 配置-->
+    <bean id="people" class="com.springdemo.People"
+      scope="prototype"
+    >
+        <property name="name" value=" liu zhaoyang"/>
+        <property name="id" value="1"></property>
     </bean>
 
     <!--springdemo2的配置-->
